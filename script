@@ -1,0 +1,42 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Asula Script", "DarkTheme")
+local Tab = Window:NewTab("Gunmod")
+local Section = Tab:NewSection("Alien Ray Gun Mod")
+
+Section:NewButton("ReloadTime", "ReloadTimemod", function()
+    game:GetService("Players").LocalPlayer.Backpack["Alien Ray Gun"].Configuration.ReloadTime.Value = 0.1
+end)
+
+Section:NewButton("AmmoCapacity", "AmmoCapacity mod", function()
+    game:GetService("Players").LocalPlayer.Backpack["Alien Ray Gun"].Configuration.AmmoCapacity.Value = 30
+end)
+
+Section:NewButton("ShotCooldown", "ShotCooldown mod", function()
+    game:GetService("Players").LocalPlayer.Backpack["Alien Ray Gun"].Configuration.ShotCooldown.Value = 0
+end)
+
+Section:NewButton("MaxSpread", "MaxSpreadmod", function()
+    game:GetService("Players").LocalPlayer.Backpack["Alien Ray Gun"].Configuration.MaxSpread.Value = 0
+end)
+
+Section:NewButton("RecoilMax", "RecoilMaxmod", function()
+     game:GetService("Players").LocalPlayer.Backpack["Alien Ray Gun"].Configuration.RecoilMax.Value = 0.2
+end)
+
+Section:NewButton("RecoilMin", "RecoilMinmod", function()
+    game:GetService("Players").LocalPlayer.Backpack["Alien Ray Gun"].Configuration.RecoilMin.Value = 0.1
+end)
+
+Section:NewButton("RecoilDecay", "RecoilDecaymod", function()
+    game:GetService("Players").LocalPlayer.Backpack["Alien Ray Gun"].Configuration.RecoilMax.Value = 0.1
+end)
+
+Section:NewButton("TotalRecoilMax", "TotalRecoilMaxmod", function()
+    game:GetService("Players").LocalPlayer.Backpack["Alien Ray Gun"].Configuration.TotalRecoilMax.Value = 0.3
+end)
+
+local Tab = Window:NewTab("KeyBinds")
+local Section = Tab:NewSection("KeyBinds")
+Section:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.Delete, function()
+	Library:ToggleUI()
+end)
